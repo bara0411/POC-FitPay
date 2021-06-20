@@ -4,6 +4,10 @@ require('./src/helper/db')
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const dotenv = require('dotenv');
+
+dotenv.config();
+const port  = process.env.PORT
 
 const Route = require('./src/routes/apiRoute')
 
@@ -21,4 +25,4 @@ app.use('/api', Route)
 
 
 // start server
-app.listen(process.env.PORT, () => console.log(`Server started at port : ${process.env.PORT}`))
+app.listen(port, () => console.log(`Server started at port : ${port}`))
