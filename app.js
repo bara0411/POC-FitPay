@@ -1,11 +1,11 @@
-require('./config/config')
-require('./helper/db')
+require('./src/config/config')
+require('./src/helper/db')
 
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const Route = require('./routes/apiRoute')
+const Route = require('./src/routes/apiRoute')
 
 var app = express()
 
